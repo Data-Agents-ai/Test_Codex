@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@layer base {
+  :root {
+    /* Modern gradient background system */
+    --background: 220 25% 4%;
+    --background-secondary: 220 25% 8%; 
+    --background-tertiary: 220 25% 12%;
+    --foreground: 210 10% 95%;
+    
+    /* Primary brand colors - Enhanced cyan system */
+    --primary: 180 100% 33%;
+    --primary-foreground: 220 25% 4%;
+    --primary-glow: 180 100% 50%;
+
+    --card: 220 25% 8%;
+    --card-foreground: 210 10% 92%;
+
+    --popover: 220 25% 8%;
+    --popover-foreground: 210 10% 92%;
+
+    /* Enhanced Brand Colors */
+    --secondary: 202 65% 40%; /* Enhanced Azure */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 25% 12%; /* Dark cards */
+    --muted-foreground: 210 10% 80%; /* Light text */
+
+    --accent: 180 100% 33%; /* Vivid cyan #00a8a8 */
+    --accent-foreground: 220 25% 4%;
+
+    /* Enhanced Text Hierarchy Colors for dark theme */
+    --text-primary: 210 10% 95%; /* Very light for titles */
+    --text-secondary: 210 10% 85%; /* Light for subtitles */
+    --text-muted: 210 8% 75%; /* Medium for body text */
+    --text-light: 210 8% 60%; /* Dimmer for captions */
+
+    /* Logo Cube Colors */
+    --cube-top: 202 65% 34%; /* Azure 1 #1f628e */
+    --cube-left: 221 81% 66%; /* Light blue #6196ed */
+    --cube-right: 0 0% 35%; /* Darker gray for contrast */
+    --cube-edges: 192 51% 33%; /* Azure 2 #2f7990 */
+
+    --success: 142 71% 45%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.6rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Typography */
+    --font-sans: 'Montserrat', 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    --font-heading: 'Montserrat', 'Space Grotesk', ui-sans-serif, system-ui;
+
+    /* Modern gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--background)), hsl(var(--background-secondary)));
+    --gradient-hero: radial-gradient(ellipse at center, hsl(var(--background-secondary)) 0%, hsl(var(--background)) 70%);
+    --gradient-mesh: conic-gradient(from 45deg, hsl(var(--primary)/0.1), hsl(var(--accent)/0.1), hsl(var(--primary)/0.05), hsl(var(--accent)/0.1));
+    --shadow-elegant: 0 25px 50px -12px hsl(var(--primary) / 0.4);
+    --shadow-glow: 0 0 80px hsl(var(--primary-glow) / 0.3);
+    --shadow-intense: 0 0 40px hsl(var(--accent) / 0.6);
+  }
+
+  .dark {
+    --background: 229 82% 8%; /* Darker blue background */
+    --foreground: 0 0% 92%; /* High contrast light text */
+
+    --card: 229 70% 10%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 229 70% 10%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 229 82% 11%; /* Dark blue */
+    --primary-foreground: 0 0% 95%; /* High contrast */
+
+    --secondary: 202 65% 45%; /* Brighter Azure for dark mode */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 229 30% 15%; /* Dark muted background */
+    --muted-foreground: 0 0% 75%; /* Light muted text */
+
+    --accent: 180 100% 40%; /* Brighter cyan for dark mode */
+    --accent-foreground: 229 82% 8%;
+
+    /* Dark Mode Text Hierarchy */
+    --text-primary: 0 0% 95%; /* Very light for titles */
+    --text-secondary: 0 0% 85%; /* Light for subtitles */
+    --text-muted: 0 0% 70%; /* Medium for body text */
+    --text-light: 0 0% 55%; /* Darker for captions */
+
+    /* Logo Cube Colors for Dark Mode */
+    --cube-top: 202 65% 45%; /* Brighter Azure 1 */
+    --cube-left: 221 81% 70%; /* Brighter light blue */
+    --cube-right: 0 0% 55%; /* Lighter gray */
+    --cube-edges: 192 51% 40%; /* Brighter Azure 2 */
+
+    --success: 142 71% 45%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+  background: var(--gradient-hero);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-mesh);
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+}
+
+@layer utilities {
+  /* Typography Utilities */
+  .text-title {
+    color: hsl(var(--text-primary));
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+  
+  .text-subtitle {
+    color: hsl(var(--text-secondary));
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  
+  .text-body {
+    color: hsl(var(--text-muted));
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  .text-caption {
+    color: hsl(var(--text-light));
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .story-link {
+    position: relative;
+    display: inline-block;
+  }
+  .story-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 300ms var(--transition-smooth);
+    background: hsl(var(--accent));
+  }
+  .story-link:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
+  .hover-scale {
+    transition: transform 200ms ease;
+  }
+  .hover-scale:hover {
+    transform: translateZ(0) scale(1.03);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+/* Enhanced interactive effects */
+.interactive-spotlight {
+  position: relative;
+  --x: 50%;
+  --y: 50%;
+  --spot-opacity: 0.0;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.interactive-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(600px circle at var(--x) var(--y), hsl(var(--primary-glow) / 0.15), transparent 40%);
+  opacity: var(--spot-opacity);
+  transition: opacity 0.2s;
+  border-radius: inherit;
+}
+
+/* Glassmorphism cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 168, 168, 0.1);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Mesh gradient background */
+.mesh-gradient {
+  background: radial-gradient(circle at 20% 80%, hsl(var(--primary)/0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, hsl(var(--accent)/0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, hsl(var(--primary-glow)/0.05) 0%, transparent 50%);
+}
+
+/* Enhanced shadow utilities */
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.shadow-intense {
+  box-shadow: var(--shadow-intense);
+}
+}
