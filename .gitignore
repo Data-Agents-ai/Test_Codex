@@ -1,0 +1,38 @@
+# Dépendances
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Builds / caches
+dist/
+build/
+coverage/
+.cache/
+.temp/
+.out/
+
+# Frameworks
+.next/
+.nuxt/
+.svelte-kit/
+storybook-static/
+
+# Env (garde un .env.example commitable)
+.env
+.env.*.local
+!.env.example
+
+# Outils
+.eslintcache
+.stylelintcache
+
+# OS / éditeur
+.DS_Store
+Thumbs.db
+.vscode/
