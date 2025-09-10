@@ -1,4 +1,3 @@
-# Test_Codex
 
 ## Environment Variables
 
