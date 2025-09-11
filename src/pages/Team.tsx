@@ -44,7 +44,7 @@ const Team = () => {
     <>
       <SEO
         title="Our Team | Data Agents"
-        description="Meet the co-founders: experienced data and AI experts helping businesses transform data into competitive advantage."
+        description="Rencontrez nous: experienced data and AI experts helping businesses transform data into competitive advantage."
       />
       <main className="container mx-auto py-10">
         <header className="max-w-2xl text-center mx-auto mb-12">
